@@ -15,6 +15,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import store from '../stores/store';
+import DialogTitle from "@material-ui/core/DialogTitle/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText/DialogContentText";
+import DialogActions from "@material-ui/core/DialogActions/DialogActions";
+import Dialog from "@material-ui/core/Dialog/Dialog";
 
 const styles = theme => ({
   appBar: {
@@ -106,8 +111,21 @@ class Posts extends Component {
           </div>
           <div className={classNames(classes.layout, classes.cardGrid)}>
             {/* End hero unit */}
+
+            <Dialog open={this.props.open} onClose={this.props.handleClose}>
+              <DialogTitle>Edit modal</DialogTitle>
+              <DialogContent>
+                <DialogContentText>Here might be a form</DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button color="primary" onClick={this.props.handleClose}>
+                  OK
+                </Button>
+              </DialogActions>
+            </Dialog>
+
             <Grid container spacing={40}>
-              {store.posts.map(post => (
+              {posts.map(post => (
                 <Grid item key={post.sys.id} sm={6} md={4} lg={3}>
                   <Card className={classes.card}>
                     <CardMedia
@@ -126,7 +144,7 @@ class Posts extends Component {
                       <Button size="small" color="primary" component={Link} to={"/posts/"+ post.sys.id}>
                         View
                       </Button>
-                      <Button size="small" color="primary">
+                      <Button size="small" color="primary" onClick={this.props.handleEditClick}>
                         Edit
                       </Button>
                     </CardActions>
