@@ -27,7 +27,7 @@ yarn install
 ```
 yarn start
 ```
- 
+3.  
 ## Deployment
 #### Heroku
 1. Create Heroku account
