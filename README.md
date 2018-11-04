@@ -1,6 +1,6 @@
-## React Contentful Material Boilerplate
+# React Contentful Material Boilerplate
 
-This is a boilerplate to simplify creation of production ready React app.
+This is a boilerplate to simplify creation of production ready React apps.
 
 It uses: 
 * create-react-app
@@ -16,7 +16,7 @@ It uses:
 yarn install
 ```
  
-#### Contentful
+### Contentful
 1. Create account on Contentful
 2. Create data models and data on Contentful
 3. Get `SPACE_ID` and `ACCESS_TOKEN`
@@ -27,9 +27,10 @@ yarn install
 ```
 yarn start
 ```
-3.  
+3. Pick the best layout
+4. Start development on selected layout 
 ## Deployment
-#### Heroku
+### Heroku
 1. Create Heroku account
 2. Add Heroku app
 3. Connect your Github branch with Heroku app
