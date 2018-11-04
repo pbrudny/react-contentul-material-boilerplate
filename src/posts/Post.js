@@ -1,18 +1,18 @@
 import React from 'react';
 import { Paper } from '@material-ui/core';
 import Grid from "@material-ui/core/Grid/Grid";
-import { SentimentDissatisfied } from "@material-ui/icons";
 
-const NotFound = () => {
+const Post = (props) => {
   return (
     <Grid container justify = "center">
       <Grid item sm={3}>
         <Paper style={{padding: 20, margin: 30}}>
-          <h1>Not found <SentimentDissatisfied /></h1>
+          <h1>{props.post.fields.title}</h1>
+          <p>{props.post.fields.body}</p>
         </Paper>
       </Grid>
     </Grid>
   )
 };
 
-export default NotFound;
+export default Post;

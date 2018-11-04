@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import store from '../stores/store';
 import { observer } from "mobx-react";
+import Post from "./Post";
 
 import { CircularProgress } from "@material-ui/core";
 
@@ -16,7 +17,7 @@ class PostDetailsContainer extends Component {
       )
     }
     return <Fragment>
-      {store.currentPost.fields.body}
+      <Post post={store.currentPost}/>
     </Fragment>
   }
 }
