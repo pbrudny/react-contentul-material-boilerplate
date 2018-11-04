@@ -32,8 +32,8 @@ yarn start
 ## Deployment
 ### Heroku
 1. Create [Heroku](heroku.com) account
-2. Add Heroku app
-3. Connect your Github branch to Heroku app
-4. Set env variables `SPACE_ID` and `ACCESS_TOKEN` on Heroku
+2. Add Heroku app (New->Create new app)
+3. Connect your Github branch to Heroku app (See [the tutorial](https://medium.com/quick-code/deploying-production-build-of-react-app-to-heroku-2548d8bf6936) )
+4. Set env variables `SPACE_ID` and `ACCESS_TOKEN` on Heroku (Settings->Reveal Config Vars)
 5. Push to the branch connected to Heroku
 6. DONE :) 
