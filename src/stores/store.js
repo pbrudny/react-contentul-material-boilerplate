@@ -8,6 +8,7 @@ const client = contentful.createClient({
 
 export class Store {
   posts = [];
+  currentPost = {};
 
   // get latestCount() {
   //   return this.posts.filter(post => post.fields.status === 'registered').length;
@@ -30,12 +31,11 @@ export class Store {
   getPost(id) {
     client.getEntries({
       content_type: 'post',
-      'fields.id': id
+      'sys.id': id
     })
       .then((response) => {
+        console.log('we have got post', response.items[0]);
         this.currentPost = response.items[0];
-        this.getCost();
-
       })
       .catch((error) => {
         console.log("Error occurred while fetching Entries");
@@ -46,6 +46,7 @@ export class Store {
 
 decorate(Store, {
   posts: observable,
+  currentPost: observable,
   getPost: action,
   getPosts: action
 });

@@ -15,8 +15,8 @@ class PostDetailsContainer extends Component {
         <CircularProgress />
       )
     }
-
     return <Fragment>
+      {store.currentPost.fields.body}
     </Fragment>
   }
 }
