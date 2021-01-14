@@ -1,5 +1,4 @@
 # React Contentful Material Boilerplate
-See the app: https://react-contentful-material.herokuapp.com
 
 This is a boilerplate to simplify creation of production ready React apps.
 
